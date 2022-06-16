@@ -47,6 +47,7 @@ router.post("/", async (req, res) => {
 router.put("/:id", (req, res) => {
   Tag.update(req.body, {
     where: {
+      tag_name: req.params.name,
       id: req.params.id,
     },
   });
